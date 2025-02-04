@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editors Crib</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Bricolage Grotesque', sans-serif;
+        }
+
+        body {
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Section Background Style */
+        section {
+            padding: 8rem 2rem;
+            min-height: 100vh;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            border-bottom: 1px solid #333;
+        }
+
+        nav {
+            background: rgba(17, 17, 17, 0.95);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+            padding: 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #ff4d4d;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem auto;
+            max-width: 1200px;
+        }
+
+        .service-card {
+            background: rgba(26, 26, 26, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            border: 1px solid #333;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+        }
+
+        .client-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 1rem auto;
+            border: 3px solid #ff4d4d;
+        }
+
+        .highlight-heading {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #ff4d4d, #ff3333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .social-links {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 2rem;
+            transition: color 0.3s;
+            padding: 1rem;
+            background: rgba(255, 77, 77, 0.1);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff4d4d, #ff3333);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 700;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            section {
+                padding: 6rem 1rem;
+                background-attachment: scroll;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#work">Featured Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">EDITORS CRIB</h1>
+        <h2 style="color: #ff4d4d;">Video Editing & Graphic Design Studio</h2>
+        <p style="margin: 2rem auto; max-width: 600px;">
+            Crafting visuals that captivate and convert. Trusted by YouTubers, influencers, and brands for 5+ years.
+        </p>
+        <a href="#contact" class="cta-button">Contact Us</a>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🎬 Video Editing</h3>
+                <p>Professional editing for YouTube, ads, reels, and more.</p>
+            </div>
+            <div class="service-card">
+                <h3>🖼️ Thumbnail Design</h3>
+                <p>Click-worthy thumbnails that boost CTR.</p>
+            </div>
+            <div class="service-card">
+                <h3>🚀 Banner Design</h3>
+                <p>Branding visuals for social media and websites.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients">
+        <h2>Past Collaborations</h2>
+        <div class="clients-grid">
+            <div class="client-card">
+                <img src="assets/sujal.jpg" alt="Sujal Jethwani">
+                <h3>Sujal Jethwani</h3>
+                <p>200K+ Followers</p>
+                <a href="https://instagram.com/sujaljethwani" target="_blank" style="color: #ff4d4d;">@sujaljethwani</a>
+            </div>
+            <div class="client-card">
+                <img src="assets/eknoor.jpg" alt="Eknoor Singh">
+                <h3>Eknoor Singh</h3>
+                <p>200K+ Followers</p>
+                <a href="https://instagram.com/eknoor_singh" target="_blank" style="color: #ff4d4d;">@eknoor_singh</a>
+            </div>
+            <div class="client-card">
+                <img src="assets/harman.jpg" alt="Harman Singh">
+                <h3>Harman Singh</h3>
+                <p>306K+ Followers</p>
+                <a href="https://instagram.com/harmansingh" target="_blank" style="color: #ff4d4d;">@harmansingh</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="work">
+        <h2>Featured Work</h2>
+        <div class="featured-work">
+            <h3>Perfume Ad Campaign</h3>
+            <p>🎯 <strong>3 Million Views</strong> on Instagram</p>
+            <p>Conceptualized and edited a viral ad for a luxury perfume brand.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="highlight-heading">LET'S WORK TOGETHER</h2>
+        <div class="contact-info">
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                📞 <a href="tel:7304882907" style="color: #ff4d4d;">+91 73048 82907</a>
+            </p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/editors.crib/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@kaustubhbhoir9887" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://drive.google.com/drive/folders/1nm8dI3Ze-2aTdEDcSheETo1PHaSiDC4t?usp=sharing" target="_blank"><i class="fas fa-folder-open"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
